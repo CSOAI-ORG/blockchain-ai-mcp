@@ -1,0 +1,24 @@
+{
+  "name": "blockchain-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Web3 and cryptocurrency toolkit for AI agents: wallet analysis, transaction",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/blockchain-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "wallet_analyzer",
+    "transaction_tracer",
+    "smart_contract_auditor",
+    "gas_estimator",
+    "token_metadata"
+  ],
+  "categories": [
+    "Blockchain",
+    "Web3"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

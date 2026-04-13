@@ -1,0 +1,10 @@
+name: blockchain-ai-mcp
+description: "MEOK AI Labs — Web3 and cryptocurrency toolkit for AI agents: wallet analysis, transaction"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/blockchain-ai-mcp
+license: MIT
+categories: [Blockchain, Web3]
+tags: [blockchain, web3, cryptocurrency, defi, smart-contracts, ethereum]
+runtime: python
+entrypoint: server.py
