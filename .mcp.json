@@ -1,24 +1,134 @@
 {
   "name": "blockchain-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Web3 and cryptocurrency toolkit for AI agents: wallet analysis, transaction",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/blockchain-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "**By MEOK AI Labs** | [meok.ai](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "wallet_analyzer",
-    "transaction_tracer",
-    "smart_contract_auditor",
-    "gas_estimator",
-    "token_metadata"
-  ],
-  "categories": [
-    "Blockchain",
-    "Web3"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "wallet_analyzer",
+      "description": "Analyze an Ethereum wallet's transaction history, portfolio, and risk profile.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "token_balances": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "address"
+        ]
+      }
+    },
+    {
+      "name": "transaction_tracer",
+      "description": "Trace a transaction's full execution path including internal calls",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "tx_hash": {
+            "type": "string"
+          },
+          "from_addr": {
+            "type": "string"
+          },
+          "to_addr": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "internal_txns": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "token_transfers": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "tx_hash"
+        ]
+      }
+    },
+    {
+      "name": "smart_contract_auditor",
+      "description": "Audit Solidity smart contract source code for common vulnerabilities",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source_code": {
+            "type": "string"
+          },
+          "contract_name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_code"
+        ]
+      }
+    },
+    {
+      "name": "gas_estimator",
+      "description": "Estimate gas costs for common blockchain operations with priority-based",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "type": "string"
+          },
+          "gas_price_gwei": {
+            "type": "number"
+          },
+          "eth_price_usd": {
+            "type": "number"
+          },
+          "priority": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "token_metadata",
+      "description": "Analyze token metadata including supply distribution, holder concentration,",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "chain": {
+            "type": "string"
+          },
+          "supply_data": {
+            "type": "object"
+          },
+          "holder_data": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "address"
+        ]
+      }
+    }
+  ]
 }

@@ -1,10 +1,77 @@
 name: blockchain-ai-mcp
-description: "MEOK AI Labs — Web3 and cryptocurrency toolkit for AI agents: wallet analysis, transaction"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/blockchain-ai-mcp
-license: MIT
-categories: [Blockchain, Web3]
-tags: [blockchain, web3, cryptocurrency, defi, smart-contracts, ethereum]
-runtime: python
-entrypoint: server.py
+description: '**By MEOK AI Labs** | [meok.ai](https://meok.ai)'
+version: 1.0.0
+tools:
+- name: wallet_analyzer
+  description: Analyze an Ethereum wallet's transaction history, portfolio, and risk
+    profile.
+  parameters:
+  - name: address
+    type: string
+    required: true
+  - name: transactions
+    type: array
+    required: false
+  - name: token_balances
+    type: array
+    required: false
+- name: transaction_tracer
+  description: Trace a transaction's full execution path including internal calls
+  parameters:
+  - name: tx_hash
+    type: string
+    required: true
+  - name: from_addr
+    type: string
+    required: false
+  - name: to_addr
+    type: string
+    required: false
+  - name: value
+    type: number
+    required: false
+  - name: internal_txns
+    type: array
+    required: false
+  - name: token_transfers
+    type: array
+    required: false
+- name: smart_contract_auditor
+  description: Audit Solidity smart contract source code for common vulnerabilities
+  parameters:
+  - name: source_code
+    type: string
+    required: true
+  - name: contract_name
+    type: string
+    required: false
+- name: gas_estimator
+  description: Estimate gas costs for common blockchain operations with priority-based
+  parameters:
+  - name: operation
+    type: string
+    required: false
+  - name: gas_price_gwei
+    type: number
+    required: false
+  - name: eth_price_usd
+    type: number
+    required: false
+  - name: priority
+    type: string
+    required: false
+- name: token_metadata
+  description: Analyze token metadata including supply distribution, holder concentration,
+  parameters:
+  - name: address
+    type: string
+    required: true
+  - name: chain
+    type: string
+    required: false
+  - name: supply_data
+    type: object
+    required: false
+  - name: holder_data
+    type: object
+    required: false

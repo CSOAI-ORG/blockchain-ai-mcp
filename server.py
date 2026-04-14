@@ -11,6 +11,11 @@ Install: pip install mcp
 Run:     python server.py
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import hashlib
 import math
 import re
@@ -498,7 +503,7 @@ mcp = FastMCP(
 
 @mcp.tool()
 def wallet_analyzer(address: str, transactions: list[dict] = [],
-                    token_balances: list[dict] = []) -> dict:
+                    token_balances: list[dict] = [], api_key: str = "") -> dict:
     """Analyze an Ethereum wallet's transaction history, portfolio, and risk profile.
 
     Args:
@@ -506,6 +511,10 @@ def wallet_analyzer(address: str, transactions: list[dict] = [],
         transactions: Transaction history as [{"from": "0x...", "to": "0x...", "value": 1.5, "type": "transfer", "date": "2026-01-01"}]
         token_balances: Token holdings as [{"token": "USDC", "balance": 1000, "value_usd": 1000}]
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -518,7 +527,7 @@ def wallet_analyzer(address: str, transactions: list[dict] = [],
 @mcp.tool()
 def transaction_tracer(tx_hash: str, from_addr: str = "", to_addr: str = "",
                        value: float = 0, internal_txns: list[dict] = [],
-                       token_transfers: list[dict] = []) -> dict:
+                       token_transfers: list[dict] = [], api_key: str = "") -> dict:
     """Trace a transaction's full execution path including internal calls
     and token transfers.
 
@@ -530,6 +539,10 @@ def transaction_tracer(tx_hash: str, from_addr: str = "", to_addr: str = "",
         internal_txns: Internal transactions as [{"from": "0x", "to": "0x", "value": 0.1, "type": "call"}]
         token_transfers: Token transfers as [{"token": "USDC", "from": "0x", "to": "0x", "amount": 100}]
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -540,7 +553,7 @@ def transaction_tracer(tx_hash: str, from_addr: str = "", to_addr: str = "",
 
 
 @mcp.tool()
-def smart_contract_auditor(source_code: str, contract_name: str = "Contract") -> dict:
+def smart_contract_auditor(source_code: str, contract_name: str = "Contract", api_key: str = "") -> dict:
     """Audit Solidity smart contract source code for common vulnerabilities
     including reentrancy, overflow, access control, and more.
 
@@ -548,6 +561,10 @@ def smart_contract_auditor(source_code: str, contract_name: str = "Contract") ->
         source_code: Solidity source code to audit
         contract_name: Name of the contract
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -559,7 +576,7 @@ def smart_contract_auditor(source_code: str, contract_name: str = "Contract") ->
 
 @mcp.tool()
 def gas_estimator(operation: str = "transfer_eth", gas_price_gwei: float = 20,
-                  eth_price_usd: float = 3000, priority: str = "medium") -> dict:
+                  eth_price_usd: float = 3000, priority: str = "medium", api_key: str = "") -> dict:
     """Estimate gas costs for common blockchain operations with priority-based
     pricing and USD conversion.
 
@@ -569,6 +586,10 @@ def gas_estimator(operation: str = "transfer_eth", gas_price_gwei: float = 20,
         eth_price_usd: Current ETH price in USD
         priority: Transaction priority (low, medium, high, urgent)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -580,7 +601,7 @@ def gas_estimator(operation: str = "transfer_eth", gas_price_gwei: float = 20,
 
 @mcp.tool()
 def token_metadata(address: str, chain: str = "ethereum",
-                   supply_data: dict = {}, holder_data: dict = {}) -> dict:
+                   supply_data: dict = {}, holder_data: dict = {}, api_key: str = "") -> dict:
     """Analyze token metadata including supply distribution, holder concentration,
     and risk assessment.
 
@@ -590,6 +611,10 @@ def token_metadata(address: str, chain: str = "ethereum",
         supply_data: Supply info as {"total_supply": N, "circulating_supply": N, "max_supply": N, "name": "X", "type": "ERC-20"}
         holder_data: Holder info as {"total_holders": N, "top_holders": [{"address": "0x", "percentage": 10.5}]}
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
