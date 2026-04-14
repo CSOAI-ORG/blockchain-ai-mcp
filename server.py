@@ -78,7 +78,7 @@ VULNERABILITY_PATTERNS = {
         "severity": "MEDIUM",
         "description": "Return value of external call not checked",
         "patterns": [r"\.call\(", r"\.delegatecall\(", r"\.staticcall\("],
-        "fix": "Always check return values: (bool success, ) = addr.call(...); require(success);",
+        "fix": "Always check return values: (bool success) = addr.call(...); require(success);",
     },
     "front_running": {
         "severity": "MEDIUM",
@@ -493,8 +493,7 @@ def _token_metadata(address: str, chain: str, supply_data: dict,
 # ---------------------------------------------------------------------------
 mcp = FastMCP(
     "Blockchain AI MCP",
-    instructions="Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract auditing, gas estimation, and token metadata. By MEOK AI Labs.",
-)
+    instructions="Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract auditing, gas estimation, and token metadata. By MEOK AI Labs.")
 
 
 @mcp.tool()
