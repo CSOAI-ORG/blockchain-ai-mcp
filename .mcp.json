@@ -1,6 +1,6 @@
 {
   "name": "blockchain-ai-mcp",
-  "description": "**By MEOK AI Labs** | [meok.ai](https://meok.ai)",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract auditing, gas estimation, ",
   "version": "1.0.0",
   "tools": [
     {
@@ -13,16 +13,10 @@
             "type": "string"
           },
           "transactions": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "token_balances": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           }
         },
         "required": [
@@ -49,16 +43,10 @@
             "type": "number"
           },
           "internal_txns": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "token_transfers": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           }
         },
         "required": [

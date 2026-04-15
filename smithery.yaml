@@ -1,5 +1,6 @@
 name: blockchain-ai-mcp
-description: '**By MEOK AI Labs** | [meok.ai](https://meok.ai)'
+description: 'Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract
+  auditing, gas estimation, '
 version: 1.0.0
 tools:
 - name: wallet_analyzer
