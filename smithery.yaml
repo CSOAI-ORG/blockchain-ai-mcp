@@ -1,6 +1,6 @@
 name: blockchain-ai-mcp
-description: 'Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract
-  auditing, gas estimation, '
+description: MCP server for blockchain ai. Features wallet analyzer, transaction tracer,
+  smart contract auditor. From MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: wallet_analyzer

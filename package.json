@@ -1,7 +1,7 @@
 {
   "name": "blockchain-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — blockchain MCP Server",
+  "description": "MCP server for blockchain ai. Features wallet analyzer, transaction tracer, smart contract auditor. From MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "blockchain",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/blockchain-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/blockchain-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/blockchain-ai-mcp"
+  }
 }
