@@ -1,0 +1,58 @@
+{
+  "name": "Blockchain AI MCP",
+  "description": "Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract auditing, gas estimation, and token metadata. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/blockchain-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "wallet_analyzer",
+      "description": "Analyze an Ethereum wallet's transaction history, portfolio, and risk profile."
+    },
+    {
+      "name": "transaction_tracer",
+      "description": "Trace a transaction's full execution path including internal calls"
+    },
+    {
+      "name": "smart_contract_auditor",
+      "description": "Audit Solidity smart contract source code for common vulnerabilities"
+    },
+    {
+      "name": "gas_estimator",
+      "description": "Estimate gas costs for common blockchain operations with priority-based"
+    },
+    {
+      "name": "token_metadata",
+      "description": "Analyze token metadata including supply distribution, holder concentration,"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Blockchain & Web3",
+    "Data & Analytics"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
