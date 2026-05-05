@@ -1,53 +1,38 @@
-# Blockchain AI MCP Server
-**By MEOK AI Labs** | [meok.ai](https://meok.ai)
+<div align="center">
 
-Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract auditing, gas estimation, and token metadata.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/blockchain-ai-mcp)](https://github.com/CSOAI-ORG/blockchain-ai-mcp/stargazers)
 
-## Tools
+# Blockchain Ai Mcp
 
-| Tool | Description |
-|------|-------------|
-| `wallet_analyzer` | Analyze wallet transaction history, portfolio, and risk profile |
-| `transaction_tracer` | Trace transaction execution path with internal calls |
-| `smart_contract_auditor` | Audit Solidity contracts for common vulnerabilities |
-| `gas_estimator` | Estimate gas costs for common blockchain operations |
-| `token_metadata` | Analyze token supply distribution and holder concentration |
+**Immutable audit trails with SHA-256 hash chain verification for compliance certifications**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/blockchain-ai-mcp)](https://www.npmjs.com/package/@meok-ai/blockchain-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/blockchain-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
-pip install mcp
+pip install blockchain-ai-mcp
+# or
+npm install -g @meok-ai/blockchain-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-### Run the server
+See the project repository for full documentation and examples.
 
-```bash
-python server.py
-```
+## Enterprise Support
 
-### Claude Desktop config
-
-```json
-{
-  "mcpServers": {
-    "blockchain": {
-      "command": "python",
-      "args": ["/path/to/blockchain-ai-mcp/server.py"]
-    }
-  }
-}
-```
-
-## Pricing
-
-| Tier | Limit | Price |
-|------|-------|-------|
-| Free | 30 calls/day | $0 |
-| Pro | Unlimited + premium features | $9/mo |
-| Enterprise | Custom + SLA + support | Contact us |
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT
+MIT © [CSOAI](https://csoai.org)
