@@ -4,7 +4,7 @@
 
 # Blockchain Ai Mcp
 
-**Immutable audit trails with SHA-256 hash chain verification for compliance certifications**
+**Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract auditing, gas estimation, and token metadata.**
 
 [![npm version](https://img.shields.io/npm/v/@meok-ai/blockchain-ai-mcp)](https://www.npmjs.com/package/@meok-ai/blockchain-ai-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
