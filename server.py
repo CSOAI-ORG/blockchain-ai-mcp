@@ -510,6 +510,21 @@ def wallet_analyzer(address: str, transactions: list[dict] = [],
         address: Ethereum wallet address (0x...)
         transactions: Transaction history as [{"from": "0x...", "to": "0x...", "value": 1.5, "type": "transfer", "date": "2026-01-01"}]
         token_balances: Token holdings as [{"token": "USDC", "balance": 1000, "value_usd": 1000}]
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -538,6 +553,21 @@ def transaction_tracer(tx_hash: str, from_addr: str = "", to_addr: str = "",
         value: ETH value transferred
         internal_txns: Internal transactions as [{"from": "0x", "to": "0x", "value": 0.1, "type": "call"}]
         token_transfers: Token transfers as [{"token": "USDC", "from": "0x", "to": "0x", "amount": 100}]
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -560,6 +590,21 @@ def smart_contract_auditor(source_code: str, contract_name: str = "Contract", ap
     Args:
         source_code: Solidity source code to audit
         contract_name: Name of the contract
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -585,6 +630,21 @@ def gas_estimator(operation: str = "transfer_eth", gas_price_gwei: float = 20,
         gas_price_gwei: Current gas price in Gwei
         eth_price_usd: Current ETH price in USD
         priority: Transaction priority (low, medium, high, urgent)
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -610,6 +670,21 @@ def token_metadata(address: str, chain: str = "ethereum",
         chain: Blockchain network (ethereum, polygon, arbitrum, etc.)
         supply_data: Supply info as {"total_supply": N, "circulating_supply": N, "max_supply": N, "name": "X", "type": "ERC-20"}
         holder_data: Holder info as {"total_holders": N, "top_holders": [{"address": "0x", "percentage": 10.5}]}
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
