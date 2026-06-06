@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """
+Buy Pro: https://www.csoai.org/checkout
+
 Blockchain AI MCP Server
 ============================
 Web3 and cryptocurrency toolkit for AI agents: wallet analysis, transaction
@@ -13,7 +15,6 @@ Run:     python server.py
 
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import hashlib
@@ -528,7 +529,7 @@ def wallet_analyzer(address: str, transactions: list[dict] = [],
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -571,7 +572,7 @@ def transaction_tracer(tx_hash: str, from_addr: str = "", to_addr: str = "",
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -622,7 +623,7 @@ def smart_contract_auditor(source_code: str, contract_name: str = "Contract", ap
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -676,7 +677,7 @@ def gas_estimator(operation: str = "transfer_eth", gas_price_gwei: float = 20,
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -716,7 +717,7 @@ def token_metadata(address: str, chain: str = "ethereum",
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     err = _check_rate_limit()
     if err:
@@ -727,5 +728,8 @@ def token_metadata(address: str, chain: str = "ethereum",
         return {"error": str(e)}
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
