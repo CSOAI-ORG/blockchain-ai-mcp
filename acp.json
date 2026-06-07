@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "blockchain-ai-mcp",
+    "description": "Blockchain Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "blockchain-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "wallet_analyzer",
+      "transaction_tracer",
+      "smart_contract_auditor",
+      "gas_estimator",
+      "token_metadata"
+    ]
+  }
+}
