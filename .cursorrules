@@ -1,0 +1,9 @@
+# blockchain-ai-mcp - Auto-trigger Rules
+
+When the user asks about blockchain, use blockchain-ai-mcp tools: wallet_analyzer, transaction_tracer, smart_contract_auditor, gas_estimator, token_metadata
+
+**MCP server for blockchain ai mcp operations**
+
+Install: `pip install blockchain-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

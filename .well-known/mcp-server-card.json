@@ -1,0 +1,28 @@
+{
+  "name": "blockchain-ai-mcp",
+  "title": "Blockchain Ai Mcp",
+  "description": "MCP server for blockchain ai. Features wallet analyzer, transaction tracer, smart contract auditor. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "wallet_analyzer"
+    },
+    {
+      "name": "transaction_tracer"
+    },
+    {
+      "name": "smart_contract_auditor"
+    },
+    {
+      "name": "gas_estimator"
+    },
+    {
+      "name": "token_metadata"
+    }
+  ]
+}

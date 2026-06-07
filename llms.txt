@@ -1,32 +1,36 @@
-# Blockchain Ai MCP
-
-> Web3/crypto toolkit: wallet analysis, transaction tracing, smart contract auditing, gas estimatio...
-
-`blockchain-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# blockchain-ai-mcp
+# **MCP server for blockchain ai mcp operations**
 
 ## Install
-
 ```bash
 pip install blockchain-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx blockchain-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `wallet_analyzer` — Analyze an Ethereum wallet's transaction history, portfolio, and risk profile.
-- `transaction_tracer` — Trace a transaction's full execution path including internal calls
-- `smart_contract_auditor` — Audit Solidity smart contract source code for common vulnerabilities
-- `gas_estimator` — Estimate gas costs for common blockchain operations with priority-based
-- `token_metadata` — Analyze token metadata including supply distribution, holder concentration,
+### `wallet_analyzer`
+Analyze an Ethereum wallet's transaction history, portfolio, and risk profile.
 
-## Links
+### `transaction_tracer`
+Trace a transaction's full execution path including internal calls
 
-- Source: https://github.com/CSOAI-ORG/blockchain-ai-mcp
-- PyPI: https://pypi.org/project/blockchain-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `smart_contract_auditor`
+Audit Solidity smart contract source code for common vulnerabilities
+
+### `gas_estimator`
+Estimate gas costs for common blockchain operations with priority-based
+
+### `token_metadata`
+Analyze token metadata including supply distribution, holder concentration,
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

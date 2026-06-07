@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
-
 Blockchain AI MCP Server
 ============================
 Web3 and cryptocurrency toolkit for AI agents: wallet analysis, transaction
