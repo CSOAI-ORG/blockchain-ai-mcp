@@ -4,9 +4,9 @@
   "version": "1.0.9",
   "description": "Blockchain Ai MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/blockchain-ai-mcp",
-    "source": "https://github.com/CSOAI-ORG/blockchain-ai-mcp"
+    "source": "github",
+    "id": "1209356799"
   },
   "packages": [
     {
